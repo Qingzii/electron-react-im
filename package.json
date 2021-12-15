@@ -179,10 +179,10 @@
     "enzyme-to-json": "^3.6.2",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
-    "husky": "^7.0.0",
+    "husky": "^7.0.4",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.3.1",
-    "lint-staged": "^11.2.6",
+    "lint-staged": "^12.1.2",
     "mini-css-extract-plugin": "^2.4.3",
     "opencollective-postinstall": "^2.0.3",
     "prettier": "^2.5.1",
@@ -225,7 +225,7 @@
     }
   },
   "lint-staged": {
-    "*.{vue,ts,js,jsx,json,css,less,scss,html}": [
+    "*.{vue,js,jsx,ts,tsx,json,css,less,scss,html}": [
       "prettier --config .prettierrc.js --write"
     ]
   },
@@ -236,18 +236,5 @@
   "collective": {
     "url": "https://opencollective.com/electron-react-boilerplate-594"
   },
-  "browserslist": [],
-  "prettier": {
-    "overrides": [
-      {
-        "files": [
-          ".prettierrc"
-        ],
-        "options": {
-          "parser": "json"
-        }
-      }
-    ],
-    "singleQuote": true
-  }
+  "browserslist": []
 }
