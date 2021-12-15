@@ -2,9 +2,9 @@
  * Base webpack config used across other specific configs
  */
 
-import webpack from 'webpack';
-import webpackPaths from './webpack.paths';
-import { dependencies as externals } from '../../release/app/package.json';
+import webpack from 'webpack'
+import webpackPaths from './webpack.paths'
+import { dependencies as externals } from '../../release/app/package.json'
 
 export default {
   externals: [...Object.keys(externals || {})],
@@ -48,4 +48,4 @@ export default {
       NODE_ENV: 'production',
     }),
   ],
-};
+}
