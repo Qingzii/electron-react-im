@@ -1,7 +1,8 @@
 import axios from 'axios'
 
-// axios.defaults.timeout = 10000;
 axios.defaults.baseURL = '/'
+// axios.defaults.timeout = 10000;
+axios.defaults.adapter = require('axios/lib/adapters/http')
 
 axios.interceptors.request.use(
   config => {

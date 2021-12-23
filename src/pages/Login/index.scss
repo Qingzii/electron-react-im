@@ -1,0 +1,36 @@
+.login_reg {
+  display: flex;
+  max-width: 360px;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 20px;
+  > .logo {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 20px;
+  }
+  > h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  > p {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  .MuiFormControl-root {
+    margin-bottom: 20px;
+  }
+  .MuiFormControl-root,
+  .MuiAutocomplete-root {
+    width: 100%;
+  }
+  .MuiOutlinedInput-root {
+    border-radius: 12px;
+  }
+  .MuiButton-root {
+    height: 50px;
+  }
+  .login {
+    width: 100%;
+  }
+}

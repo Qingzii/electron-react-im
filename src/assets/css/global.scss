@@ -1,0 +1,29 @@
+html,
+body {
+  color: rgba($color: #000, $alpha: 0.6);
+}
+div,
+span,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+i,
+input,
+textarea,
+section {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 0;
+  box-sizing: border-box;
+}
+#root {
+  .MuiButton-root {
+    border-radius: 10px;
+  }
+}

@@ -305,6 +305,18 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
+"@craco/craco@^6.4.3":
+  version "6.4.3"
+  resolved "https://registry.yarnpkg.com/@craco/craco/-/craco-6.4.3.tgz#784395b6ebab764056550a2860494d24c3abd44e"
+  integrity sha512-RzkXYmNzRCGUyG7mM+IUMM+nvrpSfA34352sPSGQN76UivAmCAht3sI4v5JKgzO05oUK9Zwi6abCKD7iKXI8hQ==
+  dependencies:
+    cosmiconfig "^7.0.1"
+    cosmiconfig-typescript-loader "^1.0.0"
+    cross-spawn "^7.0.0"
+    lodash "^4.17.15"
+    semver "^7.3.2"
+    webpack-merge "^4.2.2"
+
 "@cspotcode/source-map-consumer@0.8.0":
   version "0.8.0"
   resolved "https://registry.yarnpkg.com/@cspotcode/source-map-consumer/-/source-map-consumer-0.8.0.tgz#33bf4b7b39c178821606f669bbc447a6a629786b"
@@ -1856,6 +1868,11 @@ async@^2.6.2:
   dependencies:
     lodash "^4.17.14"
 
+async@^3.2.0:
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/async/-/async-3.2.2.tgz#2eb7671034bb2194d45d30e31e24ec7e7f9670cd"
+  integrity sha512-H0E+qZaDEfx/FY4t7iLRv1W2fFI6+pyCeTw1uN20AQPiwqwM6ojPxHxdLv4z8hi2DtnW9BOckSspLucW7pIE5g==
+
 asynckit@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/asynckit/-/asynckit-0.4.0.tgz#c79ed97f7f34cb8f2ba1bc9790bcc366474b4b79"
@@ -2692,6 +2709,14 @@ core-util-is@~1.0.0:
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.3.tgz#a6042d3634c2b27e9328f837b965fac83808db85"
   integrity sha512-ZQBvi1DcpJ4GDqanjucZ2Hj3wEO5pZDS89BWbkcrvdxksJorwUDDZamX9ldFkp9aw2lmBDLgkObEA4DWNJ9FYQ==
 
+cosmiconfig-typescript-loader@^1.0.0:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/cosmiconfig-typescript-loader/-/cosmiconfig-typescript-loader-1.0.1.tgz#b24b6d0452c68245b75cefae5164b59520cc1213"
+  integrity sha512-At4Ms7dDDxhfCLCg5D4HDO+B/7hl8mLZs+cjtbNIAb3sv+g7Piu1ryR5K9MpmWUVZkoCXN4mck9vx8ITcqfdvQ==
+  dependencies:
+    cosmiconfig "^7"
+    ts-node "^10.4.0"
+
 cosmiconfig@^6.0.0:
   version "6.0.0"
   resolved "https://registry.yarnpkg.com/cosmiconfig/-/cosmiconfig-6.0.0.tgz#da4fee853c52f6b1e6935f41c1a2fc50bd4a9982"
@@ -2702,6 +2727,24 @@ cosmiconfig@^6.0.0:
     parse-json "^5.0.0"
     path-type "^4.0.0"
     yaml "^1.7.2"
+
+cosmiconfig@^7, cosmiconfig@^7.0.1:
+  version "7.0.1"
+  resolved "https://registry.yarnpkg.com/cosmiconfig/-/cosmiconfig-7.0.1.tgz#714d756522cace867867ccb4474c5d01bbae5d6d"
+  integrity sha512-a1YWNUV2HwGimB7dU2s1wUMurNKjpx60HxBB6xUM8Re+2s1g1IIfJvFR0/iCF+XHdE0GMTKTuLR32UQff4TEyQ==
+  dependencies:
+    "@types/parse-json" "^4.0.0"
+    import-fresh "^3.2.1"
+    parse-json "^5.0.0"
+    path-type "^4.0.0"
+    yaml "^1.10.0"
+
+craco-sass-resources-loader@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/craco-sass-resources-loader/-/craco-sass-resources-loader-1.1.0.tgz#b9d584e28896785e329856b5796735e8e487e09c"
+  integrity sha512-JRRpuK5xKoaH3Zch/geGhoVrE5b/b4MTV2wOUFA+otZ5ANn+58+UQmA+RYSUubJFR+62i2leo8n8RMZFNSMpLg==
+  dependencies:
+    sass-resources-loader "^2.0.0"
 
 crc@^3.8.0:
   version "3.8.0"
@@ -2722,7 +2765,7 @@ cross-env@^7.0.3:
   dependencies:
     cross-spawn "^7.0.1"
 
-cross-spawn@^7.0.1, cross-spawn@^7.0.3:
+cross-spawn@^7.0.0, cross-spawn@^7.0.1, cross-spawn@^7.0.3:
   version "7.0.3"
   resolved "https://registry.yarnpkg.com/cross-spawn/-/cross-spawn-7.0.3.tgz#f73a85b9d5d41d045551c177e2882d4ac85728a6"
   integrity sha512-iRDPJKUPVEND7dHPO8rkbOnPpyDygcDFtWjpeWNCgy8WP2rXcxXL8TskReQl6OrB2G7+UJrags1q15Fudc7G6w==
@@ -4544,7 +4587,7 @@ immutable@^4.0.0:
   resolved "https://registry.yarnpkg.com/immutable/-/immutable-4.0.0.tgz#b86f78de6adef3608395efb269a91462797e2c23"
   integrity sha512-zIE9hX70qew5qTUjSS7wi1iwj/l7+m54KWU247nhM3v806UdGj1yDndXj+IOYxxtW9zyLI+xqFNZjTuDaLUqFw==
 
-import-fresh@^3.1.0:
+import-fresh@^3.1.0, import-fresh@^3.2.1:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/import-fresh/-/import-fresh-3.3.0.tgz#37162c25fcb9ebaa2e6e53d5b4d88ce17d9e0c2b"
   integrity sha512-veYYhQa+D1QBKznvhUHxb8faxlrwUnxseDAbAp457E0wLNio2bOSKnjYDhMj+YiAq61xrMGhQk9iXVk5FzgQMw==
@@ -6006,6 +6049,23 @@ mkdirp@^1.0.3, mkdirp@^1.0.4:
   resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-1.0.4.tgz#3eb5ed62622756d79a5f0e2a221dfebad75c2f7e"
   integrity sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==
 
+mobx-react-lite@^3.2.0:
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/mobx-react-lite/-/mobx-react-lite-3.2.2.tgz#cee5f09e6b0e4d2705d87276baf1de74d997fa33"
+  integrity sha512-FxJJMqmHcnQYOVVs2DdjNHioGlFsXF5/9VHztS9NAfIT3DYrxNZzVi119Zr/OmlWKkWNkAsssSNzPkqautfL4A==
+
+mobx-react@^7.2.1:
+  version "7.2.1"
+  resolved "https://registry.yarnpkg.com/mobx-react/-/mobx-react-7.2.1.tgz#e9d4c04dc63d05e1139ce773f5fee7a5b4cb7c78"
+  integrity sha512-LZS99KFLn75VWDXPdRJhILzVQ7qLcRjQbzkK+wVs0Qg4kWw5hOI2USp7tmu+9zP9KYsVBmKyx2k/8cTTBfsymw==
+  dependencies:
+    mobx-react-lite "^3.2.0"
+
+mobx@^6.3.8:
+  version "6.3.8"
+  resolved "https://registry.yarnpkg.com/mobx/-/mobx-6.3.8.tgz#a4654b1b69c683237f2444cf0af39a621d4611af"
+  integrity sha512-RfG2y766P1o9u9xrQht/HBXEoUPIr4B3Gjri3reLW/TuHm3I/3TfBBS0OaeMbw19RIF0AymqjDNlJgakN4ZK7g==
+
 moo@^0.5.0:
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/moo/-/moo-0.5.1.tgz#7aae7f384b9b09f620b6abf6f74ebbcd1b65dbc4"
@@ -7413,6 +7473,16 @@ sass-loader@^12.3.0:
     klona "^2.0.4"
     neo-async "^2.6.2"
 
+sass-resources-loader@^2.0.0:
+  version "2.2.4"
+  resolved "https://registry.yarnpkg.com/sass-resources-loader/-/sass-resources-loader-2.2.4.tgz#1a86fba499e74a88cb7ce95f0c98449f348d360e"
+  integrity sha512-hIQhBygYky+rLf+4cuoGYONZ623CEH4Swo1fs1WRJkukbqdvN1VIu2KCL59du6vX92bNELzNkGPLx+NorN73xA==
+  dependencies:
+    async "^3.2.0"
+    chalk "^4.1.0"
+    glob "^7.1.6"
+    loader-utils "^2.0.0"
+
 sass@^1.43.4:
   version "1.45.0"
   resolved "https://registry.yarnpkg.com/sass/-/sass-1.45.0.tgz#192ede1908324bb293a3e403d1841dbcaafdd323"
@@ -8569,6 +8639,13 @@ webpack-dev-server@^4.4.0:
     webpack-dev-middleware "^5.2.1"
     ws "^8.1.0"
 
+webpack-merge@^4.2.2:
+  version "4.2.2"
+  resolved "https://registry.yarnpkg.com/webpack-merge/-/webpack-merge-4.2.2.tgz#a27c52ea783d1398afd2087f547d7b9d2f43634d"
+  integrity sha512-TUE1UGoTX2Cd42j3krGYqObZbOD+xF7u28WB7tfUordytSjbWTIjK/8V0amkBfTYN4/pB/GIDlJZZ657BGG19g==
+  dependencies:
+    lodash "^4.17.15"
+
 webpack-merge@^5.7.3, webpack-merge@^5.8.0:
   version "5.8.0"
   resolved "https://registry.yarnpkg.com/webpack-merge/-/webpack-merge-5.8.0.tgz#2b39dbf22af87776ad744c390223731d30a68f61"
@@ -8772,7 +8849,7 @@ yallist@^4.0.0:
   resolved "https://registry.yarnpkg.com/yallist/-/yallist-4.0.0.tgz#9bb92790d9c0effec63be73519e11a35019a3a72"
   integrity sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==
 
-yaml@^1.10.2, yaml@^1.7.2:
+yaml@^1.10.0, yaml@^1.10.2, yaml@^1.7.2:
   version "1.10.2"
   resolved "https://registry.yarnpkg.com/yaml/-/yaml-1.10.2.tgz#2301c5ffbf12b467de8da2333a459e29e7920e4b"
   integrity sha512-r3vXyErRCYJ7wg28yvBY5VSoAF8ZvlcW9/BwUzEtUsjvX/DKs24dIkuwjtuprwJJHsbyUbLApepYTR1BN4uHrg==
