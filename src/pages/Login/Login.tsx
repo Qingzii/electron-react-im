@@ -1,16 +1,18 @@
 // 登录
-import * as React from 'react'
+import { inject, observer } from 'mobx-react'
 import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
 import TextField from '@mui/material/TextField'
 import Autocomplete from '@mui/material/Autocomplete'
-const Login = () => {
+
+const Login = ({ store }) => {
   interface CountryType {
     code: string
     label: string
     phone: string
     suggested?: boolean
   }
+
   const countries: readonly CountryType[] = [
     { code: 'AD', label: 'Andorra', phone: '376' },
     {
@@ -477,4 +479,4 @@ const Login = () => {
   )
 }
 
-export default Login
+export default inject('store')(observer(Login))

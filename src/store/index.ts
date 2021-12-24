@@ -1,12 +1,14 @@
 import { makeAutoObservable } from 'mobx'
 
-class Store {
+class Store implements IMobx {
   constructor() {
     makeAutoObservable(this)
   }
-  count = 0
-  add() {
-    this.count += 1
+
+  public token: boolean = false
+
+  public setToken(val: boolean) {
+    this.token = val
   }
 }
 
