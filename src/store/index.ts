@@ -5,7 +5,7 @@ class Store implements IMobx {
     makeAutoObservable(this)
   }
 
-  public token: boolean = false
+  public token: boolean = true
 
   public setToken(val: boolean) {
     this.token = val

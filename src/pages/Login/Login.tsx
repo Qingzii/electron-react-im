@@ -4,16 +4,19 @@ import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
 import TextField from '@mui/material/TextField'
 import Autocomplete from '@mui/material/Autocomplete'
-
-const Login = ({ store }) => {
-  interface CountryType {
-    code: string
-    label: string
-    phone: string
-    suggested?: boolean
-  }
-
-  const countries: readonly CountryType[] = [
+import { useHistory } from 'react-router-dom'
+interface IProps {
+  store?: IMobx
+}
+interface ICountryType {
+  code: string
+  label: string
+  phone: string
+  suggested?: boolean
+}
+const Login: React.FC<IProps> = ({ store }) => {
+  const history = useHistory()
+  const countries: readonly ICountryType[] = [
     { code: 'AD', label: 'Andorra', phone: '376' },
     {
       code: 'AE',
@@ -469,7 +472,14 @@ const Login = ({ store }) => {
         )}
       />
       <TextField label='Your phone number' />
-      <Button size='large' style={{ display: 'block', width: '100%' }}>
+      <Button
+        size='large'
+        onClick={() => {
+          store?.setToken(true)
+          history.push('/')
+        }}
+        style={{ display: 'block', width: '100%' }}
+      >
         Log in by QR Code
       </Button>
       <Button size='large' style={{ display: 'block', width: '100%', marginTop: '10px' }}>

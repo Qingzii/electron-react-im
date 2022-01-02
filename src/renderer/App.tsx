@@ -1,9 +1,6 @@
-import './App.scss'
-import { MemoryRouter as Router, Switch, Route } from 'react-router-dom'
 import { inject, observer } from 'mobx-react'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
-import LoginReg from '../pages/Login'
-
+import Routers from 'routers'
 const App = () => {
   const theme = createTheme({
     palette: {
@@ -22,11 +19,7 @@ const App = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <Router>
-        <Switch>
-          <Route path='/' component={LoginReg} />
-        </Switch>
-      </Router>
+      <Routers />
     </ThemeProvider>
   )
 }
